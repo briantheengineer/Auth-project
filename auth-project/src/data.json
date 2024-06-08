@@ -1,3 +1,11 @@
 [
-    "cu"
+    {"name": "Brian",
+    "age": "23",
+    "category": "minecraft"},
+    
+{
+    "name": "Marcos",
+    "age": "22",
+    "category": "valorant"
+}
 ]

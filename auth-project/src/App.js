@@ -1,26 +1,24 @@
 import './App.css';
-import data from "./data.json"
+import bookData from "./bookData.json"
 
-export default function Auth() {
+
+export default function Xiu() {
   return (
-    <div>
-      <form name='myForm'>
-        Email <input id="myEmail" required type="email" ></input>
-        Password <input id="myPassword" required type="password"></input>
-        <button id="myButton" type="submit">Submit!</button>
-      </form>
-      
+    <div className="mainDiv">
+     {myBooks}
     </div>
-    
   )
 }
 
-let myButton = document.getElementById("myButton")
-myButton.addEventListener("click", checkAuth)
+let myBooks = bookData.map((book, index) =>  
 
-function checkAuth () {
-  let myEmail = document.getElementById("myEmail").value
-  let myPassword = document.getElementById("myPassword").value
-  data.push (myEmail + myPassword)
-
-}
+<div className="bookDiv" key={index}>
+<p>name: {book.title}</p>
+  <img
+    src={book.imageLink}
+    class="img-fluid rounded-top"
+    alt="Cover of the book"
+  />
+</div>
+ 
+)
