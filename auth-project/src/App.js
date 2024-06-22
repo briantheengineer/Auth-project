@@ -1,24 +1,17 @@
 import './App.css';
-import bookData from "./bookData.json"
+import MyBooks from "./MyBooks.js";
+import Header from './Header.js';
 
 
-export default function Xiu() {
+
+export default function App() {
   return (
     <div className="mainDiv">
-     {myBooks}
+      <Header />
+      <MyBooks />
     </div>
   )
 }
 
-let myBooks = bookData.map((book, index) =>  
 
-<div className="bookDiv" key={index}>
-<p>name: {book.title}</p>
-  <img
-    src={book.imageLink}
-    class="img-fluid rounded-top"
-    alt="Cover of the book"
-  />
-</div>
- 
-)
+
